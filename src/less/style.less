@@ -20,6 +20,7 @@ Light:
 @gray: #333333;
 @light: #FFFFFF;
 @light-outline: #E8E8E8;
+@middle-gray: #4D4D4D;
 
 
 body {
@@ -81,9 +82,49 @@ a {
 	  transform: scaleX(0.3) scaleY(0);
     }
   }
+  &-text {
+    font-weight: 900;
+    margin-top: 4px;
+    font-size: 36px;
+    color: @middle-gray;
+  }
 }
 
+h3 {
+  color: @light-gray;
+  font-size: 20px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Light", Helvetica, Arial , Verdana, sans-serif;
+  font-weight: 300;
+}
+
+/*
 .tab-content {
   display: inline-block;
 }
+*/
+
+.img {
+  &-logo {
+    max-height: 160px;
+    text-align: center;
+  }
+}
+
+.block {
+  &-first {
+    margin-top: 30px;
+  }
+}
+
+.wrap {
+  display: table;
+  width: 100%;
+  height: /* Your height */;
+  &-block {
+    display: table-cell;
+    vertical-align: middle;
+ }
+}
+
+
 

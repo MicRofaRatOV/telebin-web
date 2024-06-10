@@ -69,6 +69,36 @@ a:hover {
   -webkit-transform: scaleX(0.3) scaleY(0);
           transform: scaleX(0.3) scaleY(0);
 }
+.header-text {
+  font-weight: 900;
+  margin-top: 4px;
+  font-size: 36px;
+  color: #4d4d4d;
+}
+h3 {
+  color: #8c8c8c;
+  font-size: 20px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Light", Helvetica, Arial, Verdana, sans-serif;
+  font-weight: 300;
+}
+/*
 .tab-content {
   display: inline-block;
+}
+*/
+.img-logo {
+  max-height: 160px;
+  text-align: center;
+}
+.block-first {
+  margin-top: 30px;
+}
+.wrap {
+  display: table;
+  width: 100%;
+  height: ;
+}
+.wrap-block {
+  display: table-cell;
+  vertical-align: middle;
 }
