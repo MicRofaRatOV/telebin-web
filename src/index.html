@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Telebin</title>
+  <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row header-row">
+      <div class="col-xl-8 offset-lg-2">
+        <div class="nav nav-pills">
+          <span class="nav-item" role="main">
+            <a class="header-name" id="home-pill" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Telebin</a>
+          </span>
+          <span class="nav-item" role="presentation">
+            <a class="header-name" href="new-bin" id="new-bin-pill" data-bs-toggle="tab" data-bs-target="#new-bin" type="button" role="tab" aria-controls="new-bin" aria-selected="false">New bin</a>
+          </span>
+          <span class="nav-item" href="my-bins" role="presentation">
+            <a class="header-name" id="my-bins-pill" data-bs-toggle="tab" data-bs-target="#my-bins" type="button" role="tab" aria-controls="my-bins" aria-selected="false">My bins</a>
+          </span>
+          <span class="nav-item" href="account" role="presentation">
+            <a class="header-name" id="account-pill" data-bs-toggle="tab" data-bs-target="#account" type="button" role="tab" aria-controls="account" aria-selected="false">Account</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-pill" tabindex="0">
+        <!-- Telebin (main) -->
+        b
+      </div>
+
+
+      <div class="tab-pane fade" id="new-bin" role="tabpanel" aria-labelledby="new-bin-pill" tabindex="0">
+        <!-- New bin -->
+        c
+      </div>
+
+
+      <div class="tab-pane fade" id="my-bins" role="tabpanel" aria-labelledby="my-bins-pill" tabindex="0">
+        <!-- My bins -->
+        d
+      </div>
+
+
+      <div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-pill" tabindex="0">
+        <!-- Account -->
+        E
+      </div>
+    </div>
+  </div>
+
+  <script src="bs/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    // Start main page
+    switch(window.location.pathname) {
+      case "/new-bin":
+        document.getElementById("new-bin").click();
+        break;
+      case "/my-bins":
+        document.getElementById("my-bins").click();
+        break;
+      case "/account":
+        document.getElementById("account").click();
+        break;
+      default:
+        document.getElementById("home-pill").click();
+    }
+    
+  </script>
+</body>
+</html>
