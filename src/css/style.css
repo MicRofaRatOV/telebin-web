@@ -237,3 +237,7 @@ h3 {
   -webkit-transition: all .3s;
   transition: all .3s;
 }
+.text-to-show {
+  font-size: 16px;
+  margin-top: 16px;
+}

@@ -1,4 +1,5 @@
 // Start main page
+
 switch(window.location.pathname) {
   case "/new-bin":
     document.getElementById("new-bin-pill").click();
@@ -16,7 +17,7 @@ switch(window.location.pathname) {
 document.getElementById("my-bins-pill").click(); // TODO: remove
 
 
-
+// Textarea counter
 
 let textarea = document.querySelector("textarea");
 let counter = document.querySelector(".counter-current");
