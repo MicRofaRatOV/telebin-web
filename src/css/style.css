@@ -194,7 +194,7 @@ h3 {
   color: #ffffff;
   text-decoration: none;
 }
-.fill-btn:hover:after {
+.fill-btn:hover::after {
   border: 2px solid #333333;
   border-bottom: none;
   width: 100%;
@@ -202,4 +202,38 @@ h3 {
   transition: border .1s;
   -webkit-transition: width .35s;
   transition: width .35s;
+}
+#new-bin-pill {
+  color: #ffffff;
+}
+#new-bin-pill:hover {
+  color: #0088cc;
+}
+.outline-pill::before {
+  content: '';
+  width: 4rem;
+  z-index: 0;
+  -webkit-transform: translate(0.65rem, 0.7rem);
+          transform: translate(0.65rem, 0.7rem);
+  height: 2rem;
+  width: 4.5rem;
+  position: absolute;
+  background-color: #0088cc;
+  border-radius: 2px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.outline-pill:hover::before {
+  content: '';
+  width: 4rem;
+  z-index: 0;
+  -webkit-transform: translate(0.65rem, 0.7rem);
+          transform: translate(0.65rem, 0.7rem);
+  height: 2rem;
+  width: 4.5rem;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 2px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }

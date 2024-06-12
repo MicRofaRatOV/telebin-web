@@ -75,20 +75,20 @@ a {
     }
     &::after {
       display: block;
-    height: 3px;
-    background: #179cde;
-    position: absolute;
-    border-radius: 2px;
-    content: "";
-    left: 4px;
-    right: 4px;
-    opacity: 0;
-    bottom: -1px;
-    -webkit-transition: opacity .2s ease-in-out, transform .2s ease-in-out;
-    -moz-transition: opacity .2s ease-in-out, transform .2s ease-in-out;
-    -ms-transition: opacity .2s ease-in-out, transform .2s ease-in-out;
-    transform-origin: bottom;
-    transform: scaleX(0.3) scaleY(0);
+      height: 3px;
+      background: #179cde;
+      position: absolute;
+      border-radius: 2px;
+      content: "";
+      left: 4px;
+      right: 4px;
+      opacity: 0;
+      bottom: -1px;
+      -webkit-transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+      -ms-transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+      transform-origin: bottom;
+      transform: scaleX(0.3) scaleY(0);
     }
   }
   &-text {
@@ -232,7 +232,7 @@ h3 {
     text-decoration: none;
   }
 
-  &:hover:after {
+  &:hover::after {
     border: 2px solid @gray;
     border-bottom: none;
     width: 100%;
@@ -241,4 +241,31 @@ h3 {
   }
 }
 
+#new-bin-pill {
+  color: @light;
+}
+#new-bin-pill:hover {
+  color: @blue;
+}
+
+.outline-pill(@bgc) {
+  content: '';
+  width: 4rem;
+  z-index: 0;
+  transform: translate(0.65rem, 0.7rem);
+  height: 2rem;
+  width: 4.5rem;
+  position: absolute;
+  background-color: @bgc;
+  border-radius: 2px;
+  transition: all .3s;
+}
+
+.outline-pill::before {
+  .outline-pill(@blue);
+}
+
+.outline-pill:hover::before {
+  .outline-pill(@light);
+}
 
