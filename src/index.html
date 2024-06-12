@@ -3,16 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Telebin</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-  <link rel="stylesheet" href="plugin/bs/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/plugin/bs/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/plugin/bs-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/plugin/bs-table/bootstrap-table.min.css">
+
+  <link rel="stylesheet" href="/css/style.css">
 
 </head>
 
 <body>
-  <div class="container-fluid">
+  <div class="container">
     <div class="row header-row">
-      <div class="col-xl-7 offset-lg-3">
+      <div class="col-xl-8 offset-lg-2">
         <div class="nav nav-pills">
           <span class="nav-item" role="main">
             <a class="header-name not-selectable" id="home-pill" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Telebin</a>
@@ -133,7 +139,26 @@
 
       <div class="tab-pane fade" id="my-bins" role="tabpanel" aria-labelledby="my-bins-pill" tabindex="0">
         <!-- My bins -->
-        d
+        
+        <div class="col-xl-8 offset-xl-2">
+
+          <table id="table"
+            data-toggle="table"
+            data-pagination="true"
+            data-search="true"
+            data-flat="true"
+            data-url="/json/example.json">
+            <thead>
+              <tr>
+                <th data-sortable="true" data-field="date">Date</th>
+                <th data-sortable="true" data-field="title">Title</th>
+                <th data-sortable="false" data-field="link">Link</th>
+                <th data-sortable="true" data-field="click">Total clicks</th>
+              </tr>
+            </thead>
+          </table>
+
+        </div>
       </div>
 
 
@@ -144,9 +169,10 @@
     </div>
   </div>
 
-
-  <script src="plugin/bs/js/bootstrap.min.js"></script>
-  <script src="js/default.js"></script>
+  <script src="/plugin/jquery/jquery3.7.1.min.js"></script>
+  <script src="/plugin/bs/js/bootstrap.min.js"></script>
+  <script src="/plugin/bs-table/bootstrap-table.min.js"></script>
+  <script src="/js/default.js"></script>
 
 </body>
 </html>

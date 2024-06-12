@@ -60,7 +60,7 @@ a {
   &-name {
     border: none;
     display: inline-block;
-    padding: 19px 1rem 11px 1rem;
+    padding: 19px 2rem 11px 0rem;
     height: 100%;
     text-align: center;
     display: inline-block;
@@ -70,7 +70,8 @@ a {
       text-decoration: none;
       &::after {
         opacity: 1;
-        transform: scaleX(1.0) scaleY(1.0);
+        transform: scaleX(1.0) scaleY(1.0) translateX(-1rem);
+
       }
     }
     &::after {
@@ -252,13 +253,14 @@ h3 {
   content: '';
   width: 4rem;
   z-index: 0;
-  transform: translate(0.65rem, 0.7rem);
+  transform: translate(-0.4rem, 0.7rem);
   height: 2rem;
   width: 4.5rem;
   position: absolute;
   background-color: @bgc;
   border-radius: 2px;
   transition: all .3s;
+
 }
 
 .outline-pill::before {

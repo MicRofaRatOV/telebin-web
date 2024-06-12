@@ -13,7 +13,9 @@ switch(window.location.pathname) {
     document.getElementById("home-pill").click();
 }
 
-document.getElementById("new-bin-pill").click(); // TODO: remove
+document.getElementById("my-bins-pill").click(); // TODO: remove
+
+
 
 
 let textarea = document.querySelector("textarea");
@@ -26,3 +28,8 @@ function onInput(event) {
   let length = event.target.value.length;
   counter.textContent = length;
 }
+
+
+
+
+
