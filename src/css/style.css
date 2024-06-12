@@ -26,6 +26,13 @@ a {
 a:hover {
   text-decoration: underline;
 }
+.not-selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 .header-row {
   background-color: #ffffff;
   border-bottom: 1px solid #e8e8e8;
@@ -75,6 +82,12 @@ a:hover {
   font-size: 36px;
   color: #4d4d4d;
 }
+h2 {
+  color: #8c8c8c;
+  font-size: 24px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Light", Helvetica, Arial, Verdana, sans-serif;
+  font-weight: 300;
+}
 h3 {
   color: #8c8c8c;
   font-size: 20px;
@@ -91,7 +104,11 @@ h3 {
   text-align: center;
 }
 .block-first {
-  margin-top: 30px;
+  margin-top: 24px;
+}
+.block-new-bin {
+  margin-top: 52px;
+  text-align: center;
 }
 .wrap {
   display: table;
@@ -101,4 +118,88 @@ h3 {
 .wrap-block {
   display: table-cell;
   vertical-align: middle;
+}
+.new-bin-element {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  margin-top: 8px;
+  margin-left: 14px;
+}
+.new-bin-element-br {
+  display: block;
+}
+.counter {
+  position: absolute;
+  bottom: -24px;
+  right: 5px;
+}
+.counter-container {
+  position: relative;
+  width: 100%;
+}
+.text-inputs {
+  text-align: center;
+}
+.text-field {
+  text-align: center;
+  max-width: 33.3%;
+  min-width: 250px;
+}
+.btn-style {
+  background-color: #179cde;
+  color: #ffffff;
+  width: 100%;
+}
+.btn-style:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+.fill-btn {
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333333;
+  border-bottom: 2px solid #333333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+  margin-top: 28px;
+}
+.fill-btn span {
+  position: relative;
+  z-index: 2;
+}
+.fill-btn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #0088cc;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+.fill-btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+.fill-btn:hover:after {
+  border: 2px solid #333333;
+  border-bottom: none;
+  width: 100%;
+  -webkit-transition: border .1s;
+  transition: border .1s;
+  -webkit-transition: width .35s;
+  transition: width .35s;
 }

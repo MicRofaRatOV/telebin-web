@@ -3,25 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <title>Telebin</title>
-  <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="plugin/bs/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
   <div class="container-fluid">
     <div class="row header-row">
       <div class="col-xl-7 offset-lg-3">
         <div class="nav nav-pills">
           <span class="nav-item" role="main">
-            <a class="header-name" id="home-pill" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Telebin</a>
+            <a class="header-name not-selectable" id="home-pill" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Telebin</a>
           </span>
           <span class="nav-item" role="presentation">
-            <a class="header-name" href="new-bin" id="new-bin-pill" data-bs-toggle="tab" data-bs-target="#new-bin" type="button" role="tab" aria-controls="new-bin" aria-selected="false">New bin</a>
+            <a class="header-name not-selectable" href="new-bin" id="new-bin-pill" data-bs-toggle="tab" data-bs-target="#new-bin" type="button" role="tab" aria-controls="new-bin" aria-selected="false">New bin</a>
           </span>
           <span class="nav-item" href="my-bins" role="presentation">
-            <a class="header-name" id="my-bins-pill" data-bs-toggle="tab" data-bs-target="#my-bins" type="button" role="tab" aria-controls="my-bins" aria-selected="false">My bins</a>
+            <a class="header-name not-selectable" id="my-bins-pill" data-bs-toggle="tab" data-bs-target="#my-bins" type="button" role="tab" aria-controls="my-bins" aria-selected="false">My bins</a>
           </span>
           <span class="nav-item" href="account" role="presentation">
-            <a class="header-name" id="account-pill" data-bs-toggle="tab" data-bs-target="#account" type="button" role="tab" aria-controls="account" aria-selected="false">Account</a>
+            <a class="header-name not-selectable" id="account-pill" data-bs-toggle="tab" data-bs-target="#account" type="button" role="tab" aria-controls="account" aria-selected="false">Account</a>
           </span>
         </div>
       </div>
@@ -45,6 +48,7 @@
             <div class="text-center">
               <h1 class="header-text align-top">Telebin</h1>
               <h3 class="align-top">public notes telegram bot</h3>
+              <a class="fill-btn" href="https://t.me/bin_NOTE_bot"><span>@bin_NOTE_bot</span></a>
             </div>
           </div>
         </div>
@@ -53,7 +57,77 @@
 
       <div class="tab-pane fade" id="new-bin" role="tabpanel" aria-labelledby="new-bin-pill" tabindex="0">
         <!-- New bin -->
-        c
+        <div class="row block-first block-new-bin">
+          <h2 class="not-selectable">New bin</h2>
+        </div>
+
+        <div class="col-xl-8 offset-xl-2">
+          <div class="form-block">
+            <form action="">
+              <div class="mt-3">
+                <label class="form-label not-selectable" for="text">Your note</label>
+
+                <form action="">
+                  <div class="counter-container">
+                    <textarea class="form-control" id="text-div" name="text-div" rows="16" maxlength="4096"></textarea>
+                    <div class="counter not-selectable">
+                      <span class="counter-current">0</span>&nbsp;/
+                      <span class="counter-total">4096</span>
+                      <!-- 4096 for unregistered -->
+                      <!-- 8192 for registered -->
+                      <!-- 524288 for 1 point -->
+                    </div>
+                  </div>
+                  
+                  <!-- CHECKBOXes -->
+                  <div class="new-bin-element list-group-item">
+                    <input class="form-check-input me-1 disabledCheckbox" type="checkbox" value="" id="hide-name-support" checked disabled>
+                    <label class="form-check-label new-bin-text" for="hide-name-support">As guest</label>
+                  </div>
+
+                  <div class="new-bin-element list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" id="md-support">
+                    <label class="form-check-label new-bin-text" for="md-support">Markdown support</label>
+                  </div>
+
+                  <div class="new-bin-element list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" id="pass-support" disabled>
+                    <label class="form-check-label new-bin-text" for="pass-support">Password</label>
+                  </div>
+
+                  <div class="new-bin-element list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" id="custom-link-support" disabled>
+                    <label class="form-check-label new-bin-text" for="custom-link-support">Custom link</label>
+                  </div>
+
+                  <!-- TEXT INPUTs -->
+                  <div class="row">
+                    <div class="text-field mt-2">
+                      <div class="input-group input-group-sm">
+                        <span class="input-group-text" id="link">telebin.org/</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="link" placeholder="random" disabled>
+                      </div>
+                    </div>
+                    <div class="text-field mt-2">
+                      <div class="input-group input-group-sm">
+                        <span class="input-group-text" id="password">password</span>
+                        <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="password" placeholder="" disabled>
+                      </div>
+                    </div>
+                    <!-- button -->
+                    <div class="text-field mt-2">
+                      <button class="btn btn-sm btn-style">Create</button>
+                    </div>
+                  </div>
+                  
+
+                </form>
+ 
+              </div>
+            </form>
+          </div>
+        </div>
+        
       </div>
 
 
@@ -70,23 +144,9 @@
     </div>
   </div>
 
-  <script src="bs/js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-    // Start main page
-    switch(window.location.pathname) {
-      case "/new-bin":
-        document.getElementById("new-bin").click();
-        break;
-      case "/my-bins":
-        document.getElementById("my-bins").click();
-        break;
-      case "/account":
-        document.getElementById("account").click();
-        break;
-      default:
-        document.getElementById("home-pill").click();
-    }
-    
-  </script>
+
+  <script src="plugin/bs/js/bootstrap.min.js"></script>
+  <script src="js/default.js"></script>
+
 </body>
 </html>
