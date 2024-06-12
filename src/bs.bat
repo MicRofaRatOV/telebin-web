@@ -1,1 +1,1 @@
-browser-sync.cmd start --server --files "*.html" "css/*.css"
+browser-sync.cmd start --server --files "*.html" "css/*.css" "js/*.js"
