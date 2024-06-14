@@ -33,6 +33,21 @@ a:hover {
   -ms-user-select: none;
   user-select: none;
 }
+::-moz-selection {
+  background: #179cde;
+  color: #ffffff;
+  text-shadow: none;
+}
+::selection {
+  background: #179cde;
+  color: #ffffff;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: #179cde;
+  color: #EEE;
+  text-shadow: none;
+}
 .header-row {
   background-color: #ffffff;
   border-bottom: 1px solid #e8e8e8;
@@ -208,6 +223,9 @@ h3 {
 }
 #new-bin-pill:hover {
   color: #0088cc;
+}
+.highlighted-code {
+  margin-top: 100px;
 }
 .outline-pill::before {
   content: '';

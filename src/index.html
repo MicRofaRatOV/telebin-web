@@ -76,7 +76,13 @@
                 <label class="form-label not-selectable" for="text">Your note</label>
                 <form action="">
                   <div class="counter-container">
-                    <textarea class="form-control" id="text-div" name="text-div" rows="16" maxlength="4096"></textarea>
+                    <textarea class="form-control"
+                              id="text-div"
+                              name="text-div"
+                              rows="16"
+                              maxlength="4096"
+                              is="highlighted-code"
+                              language="markdown"># New bin</textarea>
                     <div class="counter not-selectable">
                       <span class="counter-current">0</span>&nbsp;/
                       <span class="counter-total">4096</span>
@@ -143,20 +149,26 @@
         
         <div class="col-xl-8 offset-xl-2">
 
+          <div id="toolbar">
+            <button id="remove" class="btn btn-sm btn-danger" disabled> Remove </button>
+            <!--button id="remove" class="btn btn-sm btn-secondary" disabled> Hide </button>
+            <button id="remove" class="btn btn-sm btn-success" disabled> Show </button-->
+          </div>
           <table id="table"
             data-toggle="table"
             data-pagination="true"
             data-search="true"
             data-flat="true"
             data-url="/json/example.json"
-            data-page-list="[10, 25, 50, 100, all]">
+            data-page-list="[10, 25, 50, 100, all]"
+            data-toolbar="#toolbar">
             <thead>
               <tr>
-                <th data-field="state" data-checkbox="true"></th>
-                <th data-sortable="true" data-field="date">Date</th>
-                <th data-sortable="true" data-field="title">Title</th>
+                <th                       data-field="state" data-checkbox="true"></th>
+                <th data-sortable="true"  data-field="date">Date</th>
+                <th data-sortable="true"  data-field="title">Title</th>
                 <th data-sortable="false" data-field="link">Link</th>
-                <th data-sortable="true" data-field="click">Total clicks</th>
+                <th data-sortable="true"  data-field="click">Total clicks</th>
                 
               </tr>
             </thead>
@@ -176,8 +188,12 @@
   <script src="/plugin/jquery/jquery3.7.1.min.js"></script>
   <script src="/plugin/bs/js/bootstrap.min.js"></script>
   <script src="/plugin/bs-table/bootstrap-table.min.js"></script>
-  
-  <script src="/js/default.js"></script>
+  <script src="/plugin/hl8.4.0/highlight.min.js"></script>
 
+  <script type="module">
+  
+  </script>
+
+  <script src="/js/default.js"></script>
 </body>
 </html>
