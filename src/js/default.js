@@ -33,6 +33,8 @@ function smallSearchButton() {
   let table = document.getElementsByClassName("fixed-table-toolbar")[0];
   table.getElementsByClassName("search")[0].classList.add("input-group-sm");
 }
+setTimeout(smallSearchButton, 150);
+
 
 // Start main page
 switch(window.location.pathname) {
@@ -49,7 +51,7 @@ switch(window.location.pathname) {
     document.getElementById("home-pill").click();
 }
 
-// document.getElementById("new-bin-pill").click(); // TODO: remove
+document.getElementById("new-bin-pill").click(); // TODO: remove
 
 
 // Textarea counter
@@ -65,12 +67,12 @@ function onInput(event) {
   counter.textContent = length;
 }
 
-setTimeout(smallSearchButton, 150);
 
 // On click to NEW BIN 
 document.querySelector("#new-bin-pill").onclick = function() {
   visibleMarkdownText(document.querySelector("#md-support").checked);
 };
+
 
 // On click to "Markdown support" check
 document.querySelector("#md-support").onclick = function() {
@@ -78,5 +80,22 @@ document.querySelector("#md-support").onclick = function() {
     visibleMarkdownText(true);
   } else {
     visibleMarkdownText(false);
+  }
+};
+
+
+// Disable markdown when selecting textarea (fix of visual bug)
+function whenTextDivSelected() {
+  const activeElement = document.activeElement
+  return activeElement && activeElement.id === "text-div";
+}
+
+document.addEventListener("selectionchange", whenTextDivSelected)
+
+document.onselectionchange = () => {
+  if (document.getSelection().type === "Range" && whenTextDivSelected()) {
+    visibleMarkdownText(false);
+  } else {
+    visibleMarkdownText(true);
   }
 };
