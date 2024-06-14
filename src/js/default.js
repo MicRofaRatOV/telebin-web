@@ -31,6 +31,10 @@ function onInput(event) {
 }
 
 
+// Make the "Search" button small
+function smallSearchButton() {
+  let table = document.getElementsByClassName("fixed-table-toolbar")[0];
+  table.getElementsByClassName("search")[0].classList.add("input-group-sm");
+}
 
-
-
+setTimeout(smallSearchButton, 150);

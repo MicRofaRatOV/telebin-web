@@ -74,7 +74,6 @@
             <form action="">
               <div class="mt-3">
                 <label class="form-label not-selectable" for="text">Your note</label>
-
                 <form action="">
                   <div class="counter-container">
                     <textarea class="form-control" id="text-div" name="text-div" rows="16" maxlength="4096"></textarea>
@@ -149,13 +148,16 @@
             data-pagination="true"
             data-search="true"
             data-flat="true"
-            data-url="/json/example.json">
+            data-url="/json/example.json"
+            data-page-list="[10, 25, 50, 100, all]">
             <thead>
               <tr>
+                <th data-field="state" data-checkbox="true"></th>
                 <th data-sortable="true" data-field="date">Date</th>
                 <th data-sortable="true" data-field="title">Title</th>
                 <th data-sortable="false" data-field="link">Link</th>
                 <th data-sortable="true" data-field="click">Total clicks</th>
+                
               </tr>
             </thead>
           </table>
@@ -174,6 +176,7 @@
   <script src="/plugin/jquery/jquery3.7.1.min.js"></script>
   <script src="/plugin/bs/js/bootstrap.min.js"></script>
   <script src="/plugin/bs-table/bootstrap-table.min.js"></script>
+  
   <script src="/js/default.js"></script>
 
 </body>
