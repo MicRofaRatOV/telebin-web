@@ -290,3 +290,24 @@ h3 {
   font-size: 16px;
   margin-top: 16px;
 }
+
+.account {
+  &-header {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 24px;
+    &-connected {
+      color: @blue;
+    }
+    &-notconnected {
+      color: @light-gray;
+    }
+  }
+  &-link {
+    display: block;
+    text-align: center;
+    &-gray {
+      color: @light-gray;
+    }
+  }
+}

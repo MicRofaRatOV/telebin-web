@@ -259,3 +259,21 @@ h3 {
   font-size: 16px;
   margin-top: 16px;
 }
+.account-header {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 24px;
+}
+.account-header-connected {
+  color: #0088cc;
+}
+.account-header-notconnected {
+  color: #8c8c8c;
+}
+.account-link {
+  display: block;
+  text-align: center;
+}
+.account-link-gray {
+  color: #8c8c8c;
+}

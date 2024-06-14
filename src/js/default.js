@@ -52,7 +52,7 @@ switch(window.location.pathname) {
     document.getElementById("home-pill").click();
 }
 
-document.getElementById("new-bin-pill").click(); // TODO: remove
+document.getElementById("account-pill").click(); // TODO: remove
 
 
 // Textarea counter
