@@ -25,8 +25,9 @@ function visibleMarkdownText(is_visible) {
   } else {
     defalutText.style.color = "#333333";
   }
-  
 }
+setTimeout(visibleMarkdownText, 150, document.querySelector("#md-support").checked);
+
 
 // Make the "Search" button small
 function smallSearchButton() {
@@ -55,7 +56,6 @@ document.getElementById("new-bin-pill").click(); // TODO: remove
 
 
 // Textarea counter
-
 let textarea = document.querySelector("textarea");
 let counter = document.querySelector(".counter-current");
 
@@ -93,6 +93,10 @@ function whenTextDivSelected() {
 document.addEventListener("selectionchange", whenTextDivSelected)
 
 document.onselectionchange = () => {
+  // Exit from function if md support disabled
+  if (!document.querySelector("#md-support").checked) return;
+
+  // Check for selection of md textarea
   if (document.getSelection().type === "Range" && whenTextDivSelected()) {
     visibleMarkdownText(false);
   } else {
